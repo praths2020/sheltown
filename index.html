@@ -82,7 +82,7 @@
                  <hr>
                 <p><a href="coupons.html">View Coupons</a></p>
                
-           
+            
               </div>
             </div>
             <div class="card">
@@ -326,9 +326,9 @@
                               </div>
                               <div class="form-group col-md-6" style="display: block;">
                                 <a style="display: inline;" href="#" style="color: #23b6ae">
-                                  <h6 style="display: inline;">Have a Promocode?</h6>
+                                  <h6 style="display: block;">Have a Promocode?</h6>
                                 </a>
-                                <a style="display: inline; margin-left: 20px;" href="#" style="color: #23b6ae">
+                                <a style="display: inline;" href="#" style="color: #23b6ae">
                                   <h6 style="display: inline;">offers</h6>
                                 </a>
                               </div>
@@ -381,7 +381,7 @@
                             </div>
                             <div class="modal-footer">
                       
-                              <button type="button" class="btn btn-info">Save changes</button>
+                              <button type="button" class="btn btn-info">Submit</button>
                             </div>
                           </div>
                         </div>
@@ -403,7 +403,7 @@
                             </div>
                             <div class="modal-footer">
                               
-                              <button type="button" class="btn btn-info">Save changes</button>
+                              <button type="button" class="btn btn-info">Save</button>
                             </div>
                           </div>
                         </div>
@@ -426,7 +426,7 @@
                   
                         <fieldset id="persional_information" class="">
                           <legend class="signup-legend">Personal information
-                            <span style="font-size:16px;margin-left: 20px; "><a href="#edit" style="color: #23b6ae; font-size:18px;"
+                            <span class="lower" style="font-size:16px;margin-left: 20px; "><a href="#edit" style=" font-size:18px;"
                                 data-toggle="modal" data-target="#edit">Edit</a></span></legend>
                           <div class="form-group">
                             <lable class="">
@@ -449,7 +449,7 @@
                           </div>
                           <legend class="signup-legend">Email Address
                            
-                            <span style="font-size:16px;margin-left: 20px; "><a style="color:#23b6ae;" href="#changep" data-toggle="modal" data-target="#exampleModalCenter">Change Password</a>
+                            <span class="lower" style="font-size:16px; margin-left: 20px; "><a style=" font-size:18px;" href="#changep" data-toggle="modal" data-target="#exampleModalCenter">Change Password</a>
                             </span></legend>
                           <div class="form-group">
                             <input type="email" name="email" id="email" placeholder="Email Id" />
@@ -496,14 +496,17 @@
                             <input type="text" class="form-control" id="inputPassword4" placeholder="First name"><br>
                             <input type="text" class="form-control" id="inputPassword4" placeholder="Last name"><br>
                             <input type="email" name="email" class="form-control" id="email" placeholder="Email Id" style="background-color: white;">
-                            <input type="text" name="phno" class="form-control" id="phno" placeholder="Contact No.">
+                            <input type="text" name="phno" class="form-control" id="phno" placeholder="Contact No."><br/>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Enter OTP">
                           </div>
                         </div>
                         
-                        <div class="modal-footer">
-                          
-                          <button type="button" class="btn btn-info">Save changes</button>
-                        </div>
+                      <div class="modal-footer lower" style="margin-left: 10px;justify-content: space-between!important;">
+                        <!--<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>-->
+                        <a href=""><span aria-hidden="true" style="font-size: 20px;">Resend OTP</span></a>
+                        <button type="button" class="btn btn-info">Save changes</button>
+                      
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -528,9 +531,9 @@
                             <input type="password" class="form-control" id="inputPassword4" placeholder="Enter OTP">
                           </div>
                         </div>
-                        <div class="modal-footer " style="margin-left: 10px;justify-content: space-between!important;">
+                        <div class="modal-footer lower" style="margin-left: 10px;justify-content: space-between!important;">
                           <!--<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>-->
-                          <span aria-hidden="true" style="font-size: 20px;color: #007bff;">Resend OTP</span>
+                          <a href=""><span aria-hidden="true" style="font-size: 20px;">Resend OTP</span></a>
                           <button type="button" class="btn btn-info">Save changes</button>
                   
                         </div>
@@ -625,8 +628,13 @@
                               <div class="dropdown-container">
                                 <label></label>
                                  <select name="" id="">
-                                    <option value=""> All Transaction </option>
-                                    <option value="">All Transactions</option>  
+                                    <option value="">All Transaction</option>
+                                    <option value="">Pending</option>
+                                    <option value="">Cancelled</option>
+                                    <option value="">Confirmed</option>
+                                    <option value="">Refund</option>
+                                    <option value="">Coupons</option>
+                                    <option value="">Vouchers</option>
                                   </select>
                               </div>
                           </div>
@@ -656,11 +664,12 @@
                           <div class="col-2">
                             <div class="dropdown-container">
                               <label></label>
-                              <select name="" id="">
-                                <option value="">Success </option>
-                                <option value="">Pending</option>
-                                <option value="">Failed</option>
+                              <select onchange="this.className=this.options[this.selectedIndex].className" class="greenText">
+                              <option class="greenText" value="" selected>Success</option>
+                              <option class="yellowText" value="">Pending</option>
+                              <option class="redText" value="">Failed</option>
                               </select>
+                            
                             </div>
                              <div></div>
                           </div>
@@ -712,7 +721,7 @@
                         <li><a href="#">Gift Cards</a></li>
                       </ul>
                     </div>
-                    <legend class="signup-legend">Personal information</legend>
+                    <legend class="signup-legend">Gift Cards</legend>
                     <div class="giftCards">
                       <div class="card w-75 border-info">
                         <div class="card-body">
@@ -752,10 +761,13 @@
                             <li>Code : 0987654321123456</li>
                             <div class="dropdown-container">
                               <label>Coupon Status : </label>
-                              <select name="cars" id="cars" style="padding: 5px; font-size: 18px;">
-                                <option value="none">Ready To Use</option>
-                                <option value="none">Expired</option>
-                              </select></div>
+                              <select onchange="this.className=this.options[this.selectedIndex].className" class="greenText">
+                                
+                                <option class="greenText" value="" selected>Ready To Use</option>
+                                <option class="redText" value="">Expired</option>
+                              </select>
+                              
+                              </div>
                             <li style="display: inline-block;">Comment: <textarea class="form-control" rows="1"
                                 style="float: right; margin-left: 10px; margin-top: 10px;"></textarea></li>
                     
@@ -777,10 +789,14 @@
                             <li>Code : 0987654321123456</li>
                             <div class="dropdown-container">
                               <label>Coupon Status : </label>
-                              <select name="cars" id="cars" style="padding: 5px; font-size: 18px;">
-                                <option value="none">Ready To Use</option>
-                                <option value="none">Expired</option>
-                              </select></div>
+
+                               <select onchange="this.className=this.options[this.selectedIndex].className" class="greenText">
+                                
+                                <option class="greenText" value="" selected>Ready To Use</option>
+                                <option class="redText" value="">Expired</option>
+                              </select>
+                             
+                              </div>
                             <li style="display: inline-block;">Comment: <textarea class="form-control" rows="1"
                                 style="float: right; margin-left: 10px; margin-top: 10px;"></textarea></li>
                     
@@ -1009,7 +1025,10 @@
 <!-- Footer -->
  </section>    
      <!---------------------------------desktop view end--------------------------------->
+  
+    
      <script src="myaccount.js"></script>
+     
    <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
